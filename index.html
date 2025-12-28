@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Planner </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-book"></i> Study Planner </h1>
+        <p>Organize, Track, Succeed</p>
+    </header>
+    
+    <main class="container">
+        <section class="card" id="timetable">
+            <h2><i class="fas fa-calendar-alt"></i> Timetable</h2>
+            <table id="schedule">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                        <th>Sunday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows added dynamically -->
+                </tbody>
+            </table>
+            <button class="btn-primary" id="add-row"><i class="fas fa-plus"></i> Add Time Slot</button>
+        </section>
+        
+        <section class="card" id="subjects">
+            <h2><i class="fas fa-palette"></i> Subject Colors</h2>
+            <div id="subject-list"></div>
+            <div class="input-group">
+                <input type="text" id="new-subject" placeholder="e.g., Math">
+                <select id="color-select">
+                    <option value="blue">Blue (Math)</option>
+                    <option value="green">Green (Science)</option>
+                    <option value="red">Red (History)</option>
+                    <option value="yellow">Yellow (English)</option>
+                </select>
+                <button class="btn-primary" id="add-subject"><i class="fas fa-plus"></i> Add</button>
+            </div>
+        </section>
+        
+        <section class="card" id="progress">
+            <h2><i class="fas fa-chart-line"></i> Progress Bars</h2>
+            <div id="progress-list"></div>
+        </section>
+        
+        <section class="card" id="streak">
+            <h2><i class="fas fa-fire"></i> Streak Tracking</h2>
+            <div class="streak-info">
+                <p>Current Streak: <span id="current-streak">0</span> days</p>
+                <p>Longest Streak: <span id="longest-streak">0</span> days</p>
+            </div>
+            <div class="button-group">
+                <button class="btn-success" id="mark-day"><i class="fas fa-check"></i> Mark Today</button>
+                <button class="btn-danger" id="reset-streak"><i class="fas fa-undo"></i> Reset</button>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Study Planner Pro. Stay focused!</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
